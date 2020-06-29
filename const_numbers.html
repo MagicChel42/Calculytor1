@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Calculytor</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+  <form id="calculytor" name="calculytor">
+    <h1>Ипотечный калькулятор</h1>
+	<table>
+		<tr>
+			<b>Количество комнат в квартире</b>
+		</tr>
+		<tr>
+			<td><input type="radio" name="number_flat" value="one"> 1<Br></td>
+			<td><input type="radio" name="number_flat" value="two"> 2<Br></td>
+			<td><input type="radio" name="number_flat" value="three"> 3<Br></td>
+		</tr>
+	</table>
+		<p></p>
+	<table>
+		<tr>
+			<b>Количество парковочных мест</b>
+		</tr>
+		<tr>
+			<td><input type="radio" name="number_parking" value="zero"> 0<Br></td>
+			<td><input type="radio" name="number_parking" value="one"> 1<Br></td>
+			<td><input type="radio" name="number_parking" value="two"> 2<Br></td>
+		</tr>
+	</table>
+			<!-- Сделай проверку валидности вносимых данных -->
+			<p><b>Первоначальный взнос</b><br>
+			<input id="f_p" type="number" name="first_playment" size="40" placeholder="" required>
+			</p>
+			<p><b>Ипотечный процент</b><br>
+			<input id="m_i" type="number" name="mortgage_interest" min="5.5" max="12.7" step="0.1" size="40" placeholder="От 5.5 до 12.7 %" required>
+			</p>	
+			<p><b>Срок ипотечных выплат</b><br>
+			<input id="p_p" type="number" name="payment_period" min="6" max="120" step="1" size="40" placeholder="От 6 до 120 мес." required>
+			</p>
+	<p><h3>Ежемесячный платёж:</h3> 
+	<div>
+		<input id="res" type="text" readonly="readonly" name="final_result">
+	</div>
+	</p>
+	<!-- -->
+	<table>
+		<tr>
+			<td><input id='res' type="submit" onClick="result()" value="Рассчитать"></td>
+			<td><input type="reset" value="Сбросить"></td>
+		</tr>
+	</table>
+  </form>			
+  </body>
+  <script src="script.js"></script>
+</html>
